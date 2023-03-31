@@ -1,7 +1,6 @@
 # **2023 Solution Challenge : Folder**
 **Folder** is an app designed for older adults and their guardians, allowing their guardians to remotely monitor elderly's schedule and medication intake to care their well-being even from afar.
 <br><br>
-![](https://cdn.discordapp.com/attachments/1060472903793123353/1091221192016416879/folder_youtube-001_2.jpg)
 ![](https://cdn.discordapp.com/attachments/1091211029360422973/1091271161830199316/SolutionChallenge-Demo.jpg)
 
 
@@ -28,20 +27,25 @@ As Korean society enters an ultra-aged society, the number of single-person elde
 
 <br>
 
-## 🎥 **Demo Video**
+## 🎥 **Demo Video Link**
 
 <br>
-Upload Later.
+
+[![Folder Demo Video](https://cdn.discordapp.com/attachments/1060472903793123353/1091221192016416879/folder_youtube-001_2.jpg)](https://youtu.be/QQfEpRcPbzc)
+
 <br>
-<br>
+
 
 ## 📱**Feature Screen shots**
 
-<br>
+<br> <br>
 
-Upload Later
+|<img src="https://cdn.discordapp.com/attachments/1091211029360422973/1091340584733659136/KakaoTalk_20230329_191324820.gif">|<img src="https://cdn.discordapp.com/attachments/1091211029360422973/1091341327087718500/KakaoTalk_20230330_151111167.gif" >|<img src="https://cdn.discordapp.com/attachments/1091211029360422973/1091343017908129802/connect.gif">|<img src="https://cdn.discordapp.com/attachments/1091211029360422973/1091341327461007370/KakaoTalk_20230330_151145780.gif">|
+|------|------|------|------|
+|**SIGN IN & UP**|**Medication Check & Alarm**|**Connecting with the elderly**|**Interaction with the elderly**|
 
-<br>
+
+<br> <br>
 
 ## ▶ **Execution method**
 
