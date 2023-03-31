@@ -46,5 +46,5 @@ Upload Later
 
 |[오유정](https://github.com/ohyujeong)|[조유림](https://github.com/ofzlo)|[정시은](https://github.com/alacori)|[최다영](https://github.com/dayoung20)|
 |---|---|---|---|
-|<img src="https://i.ibb.co/hc3RPwT/Kakao-Talk-20230319-212123861.png">|<img src="https://cdn.discordapp.com/attachments/1091211029360422973/1091253632801976381/KakaoTalk_20230331_154004467.jpg">|<img src="https://cdn.discordapp.com/attachments/1091211029360422973/1091254304804970606/IMG_2057.png">|<img src="https://cdn.discordapp.com/attachments/1091211029360422973/1091253631673708595/KakaoTalk_20230331_155008862.png">|
+|<img src="https://i.ibb.co/hc3RPwT/Kakao-Talk-20230319-212123861.png">|<img src="https://cdn.discordapp.com/attachments/1091211029360422973/1091256442754957342/image.png">|<img src="https://cdn.discordapp.com/attachments/1091211029360422973/1091254304804970606/IMG_2057.png">|<img src="https://cdn.discordapp.com/attachments/1091211029360422973/1091253631673708595/KakaoTalk_20230331_155008862.png">|
 |Backend |ML|Frontend |Frontend|
