@@ -1,9 +1,8 @@
 # **2023 Solution Challenge : Folder**
 **Folder** is an app designed for older adults and their guardians, allowing their guardians to remotely monitor elderly's schedule and medication intake to care their well-being even from afar.
-
-<hr>
-
+<br><br>
 ![](https://cdn.discordapp.com/attachments/1060472903793123353/1091221192016416879/folder_youtube-001_2.jpg)
+
 
 ## ✨ **Introduction**
 
@@ -17,7 +16,7 @@ As Korean society enters an ultra-aged society, the number of single-person elde
 
 **Folder** aims to address UN Sustainable Development Goals (SDGs) 3. health and well-being, and 11. sustainable cities. The elderly can record their daily lives in Folder, and this record becomes a way for their loved ones to know their news without directly asking about it. 
 <br><br>
-**Folder** serves as a platform to enhance the bond between elderly and their guardians, facilitating a sense of social connectedness and stability for those who may be living alone elderly. Our overarching goal is to ensure that older adults feel a sense of belonging to a stable social community, promoting their overall well-being and quality of life
+**Folder** serves as a platform to enhance the bond between elderly and their guardians, facilitating a sense of social connectedness and stability for those who may be living alone elderly. Our overarching goal is to ensure that older adults feel a sense of belonging to a stable social community, promoting their overall well-being and quality of life.
 <br>
 <br>
 
@@ -43,11 +42,20 @@ Upload Later
 
 <br>
 
+## ▶ **Execution method**
+
+
+1. Download the apk file from [Google drive](https://drive.google.com/drive/folders/18OTfTitMM3pdO9my3RkllQjLjKCHKyje). 
+2. Run the apk file on your phone.
+
+
+<br>
+
 ## 👩‍💻 **Contributors**
 
 ### **Team Four-tter**
 
 |[오유정](https://github.com/ohyujeong)|[조유림](https://github.com/ofzlo)|[정시은](https://github.com/alacori)|[최다영](https://github.com/dayoung20)|
 |---|---|---|---|
-|<img src="https://i.ibb.co/hc3RPwT/Kakao-Talk-20230319-212123861.png">|<img src="https://cdn.discordapp.com/attachments/1091211029360422973/1091256442754957342/image.png">|<img src="https://cdn.discordapp.com/attachments/1091211029360422973/1091254304804970606/IMG_2057.png">|<img src="https://cdn.discordapp.com/attachments/1091211029360422973/1091253631673708595/KakaoTalk_20230331_155008862.png">|
+|<img src="https://i.ibb.co/hc3RPwT/Kakao-Talk-20230319-212123861.png">|<img src="https://cdn.discordapp.com/attachments/1091211029360422973/1091256442754957342/image.png" width=400>|<img src="https://cdn.discordapp.com/attachments/1091211029360422973/1091254304804970606/IMG_2057.png">|<img src="https://cdn.discordapp.com/attachments/1091211029360422973/1091253631673708595/KakaoTalk_20230331_155008862.png">|
 |Backend |ML|Frontend |Frontend|
