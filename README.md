@@ -2,6 +2,7 @@
 **Folder** is an app designed for older adults and their guardians, allowing their guardians to remotely monitor elderly's schedule and medication intake to care their well-being even from afar.
 <br><br>
 ![](https://cdn.discordapp.com/attachments/1060472903793123353/1091221192016416879/folder_youtube-001_2.jpg)
+![](https://cdn.discordapp.com/attachments/1091211029360422973/1091271161830199316/SolutionChallenge-Demo.jpg)
 
 
 ## ✨ **Introduction**
