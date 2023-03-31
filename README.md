@@ -41,7 +41,6 @@ Upload Later
 <br>
 
 ## 👩‍💻 **Contributors**
-<br>
 
 ### **Team Four-tter**
 
