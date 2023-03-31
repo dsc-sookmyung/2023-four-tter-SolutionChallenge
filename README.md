@@ -3,7 +3,7 @@
 ![](https://cdn.discordapp.com/attachments/1060472903793123353/1091221192016416879/folder_youtube-001_2.jpg)
 
 ## ✨ **Introduction**
-<hr>
+
 As Korean society enters an ultra-aged society, the number of single-person elderly households is also increasing. According to Statistics Korea, the percentage of solitary elderly individuals experiencing depressive symptoms is about twice as high as elderly couples, at 30.2%, primarily due to social isolation and loneliness. However, our guardians often fail to inquire about the well-being of their elderly loved ones due to being busy. To address this issue, Folder has launched. <br><br>
 "Folder" utilizes Firebase Cloud Messaging (FCM) to send timely meal and schedule reminders for the elderly. Additionally, using Google's TensorFlow emotion recognition model, it detects the elderly's positive and negative responses as voice, checks their schedule and medication taken, and allows guardians to monitor them. Through this, guardians can care the elderly for more effectively and efficiently.
 <br><br>
