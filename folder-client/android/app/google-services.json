@@ -1,0 +1,90 @@
+{
+  "project_info": {
+    "project_number": "540841711691",
+    "project_id": "folder-376506",
+    "storage_bucket": "folder-376506.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:540841711691:android:2c715163ec7f2b3dbf55ce",
+        "android_client_info": {
+          "package_name": "com.example.folder"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "540841711691-d37ks5stn38d1sv2q0r55sd2vvnoipui.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.folder",
+            "certificate_hash": "f7b18d73b17e7583f5ba5e4b54ba4edfcdb8c762"
+          }
+        },
+        {
+          "client_id": "540841711691-pm04jsilq0t6sqlqsvumivh0n11oh9c7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCfgIH_ez8kPG9cfCWJhDz-2c9W-02xkFA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "540841711691-pm04jsilq0t6sqlqsvumivh0n11oh9c7.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "540841711691-n5rbrs4v72sb9nu70ongpjirv5qd7crv.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.tTest"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:540841711691:android:3d269dca412b89abbf55ce",
+        "android_client_info": {
+          "package_name": "com.example.t_test"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "540841711691-pm04jsilq0t6sqlqsvumivh0n11oh9c7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCfgIH_ez8kPG9cfCWJhDz-2c9W-02xkFA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "540841711691-pm04jsilq0t6sqlqsvumivh0n11oh9c7.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "540841711691-n5rbrs4v72sb9nu70ongpjirv5qd7crv.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.tTest"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
