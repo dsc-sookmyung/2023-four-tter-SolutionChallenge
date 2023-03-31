@@ -12,7 +12,7 @@ As Korean society enters an ultra-aged society, the number of single-person elde
 
 ![](https://i.ibb.co/pWFrbZr/our-goal.png)
 
-“Folder” aims to address UN Sustainable Development Goals (SDGs) 3. health and well-being, and 11. sustainable cities. The elderly can record their daily lives in Folder, and this record becomes a way for their loved ones to know their news without directly asking about it. 
+"Folder" aims to address UN Sustainable Development Goals (SDGs) 3. health and well-being, and 11. sustainable cities. The elderly can record their daily lives in Folder, and this record becomes a way for their loved ones to know their news without directly asking about it. 
 <br><br>
 "Folder" serves as a platform to enhance the bond between elderly and their guardians, facilitating a sense of social connectedness and stability for those who may be living alone elderly. Our overarching goal is to ensure that older adults feel a sense of belonging to a stable social community, promoting their overall well-being and quality of life
 <br>
@@ -44,7 +44,6 @@ Upload Later
 <br>
 
 ### **Team Four-tter**
-<br>
 
 |[오유정](https://github.com/ohyujeong)|[조유림](https://github.com/ofzlo)|[정시은](https://github.com/alacori)|[최다영](https://github.com/dayoung20)|
 |---|---|---|---|
