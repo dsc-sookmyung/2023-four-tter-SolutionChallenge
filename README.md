@@ -9,7 +9,6 @@ As Korean society enters an ultra-aged society, the number of single-person elde
 <br><br>
 
 ## 🎯 **Our Goal**
-<hr>
 
 ![](https://i.ibb.co/pWFrbZr/our-goal.png)
 
@@ -20,21 +19,21 @@ As Korean society enters an ultra-aged society, the number of single-person elde
 <br>
 
 ## 🛠 **Project Architecture**
-<hr>
+
 
 ![](https://cdn.discordapp.com/attachments/1060472903793123353/1091251096619585587/folder_.png)
 
 <br>
 
 ## 🎥 **Demo Video**
-<hr>
+
 <br>
 Upload Later.
 <br>
 <br>
 
 ## 📱**Feature Screen shots**
-<hr>
+
 <br>
 
 Upload Later
@@ -42,7 +41,7 @@ Upload Later
 <br>
 
 ## 👩‍💻 **Contributors**
-<hr><br>
+<br>
 
 ### **Team Four-tter**
 <br>
