@@ -7,7 +7,7 @@ import '../protector/fill.dart';
 
 class CareMyScreen extends StatefulWidget {
   final String accessToken;
-  const CareMyScreen({required this.accessToken});
+  const CareMyScreen({super.key, required this.accessToken});
 
   @override
   State<CareMyScreen> createState() => _CareMyScreenState();
@@ -56,7 +56,7 @@ class _CareMyScreenState extends State<CareMyScreen> {
   Future<void> postaddpill() async {
     List<String?> fillTimes = [];
     List<String?> fills = [];
-    final url = Uri.parse('http://34.168.149.159:8080/my-page/fillInfo');
+    final url = Uri.parse('http://34.28.46.24:8080/my-page/fillInfo');
     final headers = {
       'Content-Type': 'application/json',
       'Authorization': '$_accessToken'
@@ -93,7 +93,7 @@ class _CareMyScreenState extends State<CareMyScreen> {
   }
 
   Future<void> CheckFriendApi() async {
-    const String url1 = 'http://34.168.149.159:8080/my-page/family';
+    const String url1 = 'http://34.28.46.24:8080/my-page/family';
     final urlparse = Uri.parse(url1);
     final headers = {
       "accept": "*/*",
@@ -114,7 +114,7 @@ class _CareMyScreenState extends State<CareMyScreen> {
     //그랬을때 nari마이페이지에서 dayeong의 유저코드를 받아서 확인
     print("acceptapi실행 시작");
     var url = Uri.parse(
-        'http://34.168.149.159:8080/my-page/family?accept=$accept&userFamilyId=$userFamilyId');
+        'http://34.28.46.24:8080/my-page/family?accept=$accept&userFamilyId=$userFamilyId');
     final headers = {
       "accept": "*/*",
       "Authorization": "$_accessToken",
@@ -134,7 +134,7 @@ class _CareMyScreenState extends State<CareMyScreen> {
   }
 
   Future<void> OldPillInfoApi() async {
-    const String url1 = 'http://34.168.149.159:8080/old/fillInfo/';
+    const String url1 = 'http://34.28.46.24:8080/old/fillInfo/';
     final careurl = Uri.parse(url1);
     final headers = {
       "accept": "*/*",
@@ -150,7 +150,7 @@ class _CareMyScreenState extends State<CareMyScreen> {
   }
 
   Future<void> FamilyAddApi() async {
-    String url = 'http://34.168.149.159:8080/my-page/family?userCode=';
+    String url = 'http://34.28.46.24:8080/my-page/family?userCode=';
     String url2 = oldplus.text.trim();
     final headers = {
       "accept": "*/*",
@@ -170,7 +170,7 @@ class _CareMyScreenState extends State<CareMyScreen> {
   }
 
   Future<void> UserCodeApi() async {
-    const String url1 = 'http://34.168.149.159:8080/auth/me';
+    const String url1 = 'http://34.28.46.24:8080/auth/me';
     final oldurl = Uri.parse(url1);
     final headers = {
       "accept": "*/*",
@@ -189,7 +189,7 @@ class _CareMyScreenState extends State<CareMyScreen> {
   }
 
   Future<void> PillApi() async {
-    const String url1 = 'http://34.168.149.159:8080/my-page/fillInfo/';
+    const String url1 = 'http://34.28.46.24:8080/my-page/fillInfo/';
     final careurl = Uri.parse(url1);
     final headers = {
       "accept": "*/*",
@@ -207,7 +207,7 @@ class _CareMyScreenState extends State<CareMyScreen> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: const Color(0xFFFFFFFF),
+        backgroundColor: const Color(0xFFFFF8ED),
         body: SingleChildScrollView(
           child: Padding(
             padding: const EdgeInsets.symmetric(
@@ -219,23 +219,14 @@ class _CareMyScreenState extends State<CareMyScreen> {
                 const SizedBox(
                   height: 10,
                 ),
-                Row(),
+                const Row(),
                 const SizedBox(
                   height: 40,
                 ),
                 Container(
                   clipBehavior: Clip.hardEdge,
                   decoration: BoxDecoration(
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey.withOpacity(0.2),
-                        spreadRadius: 5,
-                        blurRadius: 7,
-                        offset:
-                            const Offset(0, 3), // changes position of shadow
-                      ),
-                    ],
-                    color: Colors.white,
+                    color: const Color(0xFFF6A45A),
                     borderRadius: BorderRadius.circular(25),
                   ),
                   child: Padding(
@@ -249,7 +240,7 @@ class _CareMyScreenState extends State<CareMyScreen> {
                             offset: const Offset(10, 2),
                             child: const Icon(
                               Icons.account_circle,
-                              color: Colors.grey,
+                              color: Color(0xFFDBDBDB),
                               size: 50,
                             ),
                           ),
@@ -287,22 +278,17 @@ class _CareMyScreenState extends State<CareMyScreen> {
                   ),
                 ),
                 const SizedBox(
-                  height: 10,
+                  height: 20,
                 ),
                 Container(
                   clipBehavior: Clip.hardEdge,
                   decoration: BoxDecoration(
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey.withOpacity(0.2),
-                        spreadRadius: 5,
-                        blurRadius: 7,
-                        offset:
-                            const Offset(0, 3), // changes position of shadow
-                      ),
-                    ],
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(25),
+                    border: Border.all(
+                      color: const Color(0xFFF6A45A),
+                      width: 2.0,
+                    ),
                   ),
                   child: Padding(
                     padding: const EdgeInsets.all(20),
@@ -312,30 +298,18 @@ class _CareMyScreenState extends State<CareMyScreen> {
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Row(
+                            const Row(
                               children: [
-                                const Text(
+                                Text(
                                   '나의 코드',
                                   style: TextStyle(
                                     fontWeight: FontWeight.w600,
-                                    color: Colors.black,
+                                    color: Color(0xFFF6A45A),
                                     fontSize: 28,
                                   ),
                                 ),
-                                const SizedBox(
+                                SizedBox(
                                   width: 150,
-                                ),
-                                ElevatedButton(
-                                  style: ElevatedButton.styleFrom(
-                                    foregroundColor: Colors.white,
-                                    backgroundColor: const Color.fromARGB(
-                                        0,
-                                        0,
-                                        77,
-                                        64), // Text Color (Foreground color)
-                                  ),
-                                  onPressed: () {},
-                                  child: const Text("복사"),
                                 ),
                               ],
                             ),
@@ -346,7 +320,7 @@ class _CareMyScreenState extends State<CareMyScreen> {
                               '$userCodeget',
                               textAlign: TextAlign.start,
                               style: const TextStyle(
-                                color: Color(0xFF004D40),
+                                color: Colors.black,
                                 fontSize: 25,
                                 fontWeight: FontWeight.w400,
                               ),
@@ -358,35 +332,30 @@ class _CareMyScreenState extends State<CareMyScreen> {
                   ),
                 ),
                 const SizedBox(
-                  height: 10,
+                  height: 20,
                 ),
                 Container(
                   width: 371.4,
                   clipBehavior: Clip.hardEdge,
                   decoration: BoxDecoration(
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey.withOpacity(0.2),
-                        spreadRadius: 5,
-                        blurRadius: 7,
-                        offset:
-                            const Offset(0, 3), // changes position of shadow
-                      ),
-                    ],
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(25),
+                    border: Border.all(
+                      color: const Color(0xFFF1C974),
+                      width: 2.0,
+                    ),
                   ),
                   child: Padding(
                     padding: const EdgeInsets.all(20),
                     child: Column(
                       children: [
-                        Row(
-                          children: const [
+                        const Row(
+                          children: [
                             Text(
                               '보호대상 추가하기',
                               style: TextStyle(
                                 fontWeight: FontWeight.w600,
-                                color: Colors.black,
+                                color: Color(0xFFFFAD00),
                                 fontSize: 28,
                               ),
                             ),
@@ -420,7 +389,7 @@ class _CareMyScreenState extends State<CareMyScreen> {
                                                 BorderRadius.circular(10))),
                                     backgroundColor:
                                         MaterialStateProperty.all<Color>(
-                                            Colors.teal.shade700),
+                                            const Color(0xFFF1C974)),
                                     fixedSize: MaterialStateProperty.all<Size>(
                                         const Size.fromHeight(59))),
                                 onPressed: () {
@@ -437,34 +406,29 @@ class _CareMyScreenState extends State<CareMyScreen> {
                   ),
                 ),
                 const SizedBox(
-                  height: 10,
+                  height: 20,
                 ),
                 Container(
                   clipBehavior: Clip.hardEdge,
                   decoration: BoxDecoration(
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey.withOpacity(0.2),
-                        spreadRadius: 5,
-                        blurRadius: 7,
-                        offset:
-                            const Offset(0, 3), // changes position of shadow
-                      ),
-                    ],
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(25),
+                    border: Border.all(
+                      color: const Color(0xFFF6A45A),
+                      width: 2.0,
+                    ),
                   ),
                   child: Padding(
                     padding: const EdgeInsets.all(20),
                     child: Column(
                       children: [
-                        Row(
-                          children: const [
+                        const Row(
+                          children: [
                             Text(
                               '보호자 추가 요청',
                               style: TextStyle(
                                 fontWeight: FontWeight.w600,
-                                color: Colors.black,
+                                color: Color(0xFFF6A45A),
                                 fontSize: 28,
                               ),
                             ),
@@ -482,6 +446,7 @@ class _CareMyScreenState extends State<CareMyScreen> {
                               friendName?.isEmpty ?? true || friendName == ""
                                   ? "보호대상 추가요청이 없습니다"
                                   : "$friendName님이 보호대상 등록을 요청했어요",
+                              overflow: TextOverflow.clip,
                               textAlign: TextAlign.center,
                               style: const TextStyle(
                                 fontWeight: FontWeight.w600,
@@ -516,7 +481,7 @@ class _CareMyScreenState extends State<CareMyScreen> {
                                   "수락할게요",
                                   style: TextStyle(
                                     fontWeight: FontWeight.w600,
-                                    color: Colors.teal,
+                                    color: Color(0xFFF6A45A),
                                     fontSize: 15,
                                   ),
                                 ),
@@ -526,7 +491,7 @@ class _CareMyScreenState extends State<CareMyScreen> {
                               ),
                               ElevatedButton(
                                 style: ElevatedButton.styleFrom(
-                                  backgroundColor: Colors.teal.shade700,
+                                  backgroundColor: const Color(0xFFF6A45A),
                                   shadowColor: Colors.teal.shade700,
                                   //elevation: 3,
                                   shape: RoundedRectangleBorder(
@@ -553,29 +518,24 @@ class _CareMyScreenState extends State<CareMyScreen> {
                 Container(
                   clipBehavior: Clip.hardEdge,
                   decoration: BoxDecoration(
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey.withOpacity(0.2),
-                        spreadRadius: 5,
-                        blurRadius: 7,
-                        offset:
-                            const Offset(0, 3), // changes position of shadow
-                      ),
-                    ],
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(25),
+                    border: Border.all(
+                      color: const Color(0xFFF1C974),
+                      width: 2.0,
+                    ),
                   ),
                   child: Padding(
                     padding: const EdgeInsets.all(20),
                     child: Column(
                       children: [
-                        Row(
-                          children: const [
+                        const Row(
+                          children: [
                             Text(
                               '약 추가하기',
                               style: TextStyle(
                                 fontWeight: FontWeight.w600,
-                                color: Colors.black,
+                                color: Color(0xFFFFAD00),
                                 fontSize: 28,
                               ),
                             ),
@@ -622,11 +582,11 @@ class _CareMyScreenState extends State<CareMyScreen> {
                         ),
                         ElevatedButton(
                           style: ElevatedButton.styleFrom(
-                            backgroundColor: Colors.teal.shade700,
+                            backgroundColor: const Color(0xFFF1C974),
                             shadowColor: Colors.teal.shade700,
                             //elevation: 3,
                             shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(10)),
+                                borderRadius: BorderRadius.circular(40)),
                             minimumSize: const Size(140, 40), //////// HERE
                           ),
                           onPressed: () {
@@ -635,6 +595,8 @@ class _CareMyScreenState extends State<CareMyScreen> {
                           },
                           child: const Text(
                             '추가',
+                            style: TextStyle(
+                                fontSize: 20, fontWeight: FontWeight.w600),
                           ),
                         ),
                       ],
@@ -642,34 +604,29 @@ class _CareMyScreenState extends State<CareMyScreen> {
                   ),
                 ),
                 const SizedBox(
-                  height: 10,
+                  height: 20,
                 ),
                 Container(
                   clipBehavior: Clip.hardEdge,
                   decoration: BoxDecoration(
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey.withOpacity(0.2),
-                        spreadRadius: 5,
-                        blurRadius: 7,
-                        offset:
-                            const Offset(0, 3), // changes position of shadow
-                      ),
-                    ],
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(25),
+                    border: Border.all(
+                      color: const Color(0xFFF1C974),
+                      width: 2.0,
+                    ),
                   ),
                   child: Padding(
                     padding: const EdgeInsets.all(20),
                     child: Column(
                       children: [
-                        Row(
-                          children: const [
+                        const Row(
+                          children: [
                             Text(
                               '약 복용일지',
                               style: TextStyle(
                                 fontWeight: FontWeight.w600,
-                                color: Colors.black,
+                                color: Color(0xFFFFAD00),
                                 fontSize: 28,
                               ),
                             ),
@@ -681,8 +638,8 @@ class _CareMyScreenState extends State<CareMyScreen> {
                         const SizedBox(
                           height: 10,
                         ),
-                        Row(
-                          children: const [
+                        const Row(
+                          children: [
                             Text(
                               '복용중인 약을 수정하세요',
                               style: TextStyle(
@@ -700,13 +657,16 @@ class _CareMyScreenState extends State<CareMyScreen> {
                             itemBuilder: (context, index) {
                               return Flexible(
                                   child: ListTile(
-                                title: Text(_fillsT[index].fillName),
+                                title: Text(_fillsT[index].fillName,
+                                    style: const TextStyle(fontSize: 20.0)),
                                 subtitle: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    Text(_fillsT[index].fillTime),
+                                    Text(_fillsT[index].fillTime,
+                                        style: const TextStyle(fontSize: 20.0)),
                                     Text(
-                                        "복용여부: ${_fillsT[index].isChecked ? '복용' : '미복용'}"),
+                                        "복용여부: ${_fillsT[index].isChecked ? '복용' : '미복용'}",
+                                        style: const TextStyle(fontSize: 20.0)),
                                   ],
                                 ),
                               ));
@@ -716,7 +676,7 @@ class _CareMyScreenState extends State<CareMyScreen> {
                   ),
                 ),
                 const SizedBox(
-                  height: 10,
+                  height: 20,
                 ),
               ],
             ),
