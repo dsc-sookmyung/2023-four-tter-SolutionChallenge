@@ -1,5 +1,6 @@
 package com.gdsc.forder.service;
 
+import java.security.Principal;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -15,6 +16,7 @@ import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
+import springfox.documentation.annotations.ApiIgnore;
 
 @Service
 @PropertySource("classpath:application.properties")
@@ -31,10 +33,20 @@ public class PushNotificationService {
         this.fcmService = fcmService;
     }
 
-    public void sendPushNotification(PushNotificationDTO request) {
-        try {
-            fcmService.sendMessage(getSamplePayloadData(), request);
-        } catch (Exception e) {
+//    public void sendPushNotification(@ApiIgnore Principal principal, PushNotificationDTO request) {
+//        try {
+//            fcmService.sendMessage(getSamplePayloadData(), request);
+//        } catch (Exception e) {
+//            logger.error(e.getMessage());
+//        }
+//    }
+
+    public void sendPillNotification(PushNotificationDTO request){
+        try{
+
+            fcmService.sendMessageToToken(request);
+        }
+        catch(Exception e){
             logger.error(e.getMessage());
         }
     }

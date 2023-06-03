@@ -28,8 +28,12 @@ public class Alarm {
     @Column(name = "topic", length = 50)
     private String topic;
 
-    @ManyToOne
-    @JoinColumn(name="user_id")
-    private User user;
+//    @ManyToOne
+//    @JoinColumn(name="user_id")
+    @Column(name = "user")
+    private String user;
+
+    @Column(name = "alarm_time")
+    private String alarmTime;
 
 }
