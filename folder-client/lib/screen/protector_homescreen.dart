@@ -30,7 +30,7 @@ class _ProtectorHomeScreenState extends State<ProtectorHomeScreen> {
   }
 
   Future<void> PillApi() async {
-    const String url1 = 'http://34.168.149.159:8080/my-page/fillInfo/';
+    const String url1 = 'http://34.28.46.24:8080/my-page/fillInfo/';
     final careurl = Uri.parse(url1);
     final headers = {
       "accept": "*/*",
@@ -45,7 +45,7 @@ class _ProtectorHomeScreenState extends State<ProtectorHomeScreen> {
   }
 
   Future<void> getCalendar() async {
-    const String url1 = 'http://34.168.149.159:8080/calendar';
+    const String url1 = 'http://34.28.46.24:8080/calendar';
     final careurl = Uri.parse(url1);
     final headers = {
       "Authorization": "$_accessToken",
@@ -70,7 +70,7 @@ class _ProtectorHomeScreenState extends State<ProtectorHomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: const Color(0xFFFFF8ED),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -80,9 +80,13 @@ class _ProtectorHomeScreenState extends State<ProtectorHomeScreen> {
                 width: 372,
                 clipBehavior: Clip.hardEdge,
                 decoration: BoxDecoration(
+                  border: Border.all(
+                    color: const Color(0xFFF6A45A),
+                    width: 2,
+                  ),
                   boxShadow: [
                     BoxShadow(
-                      color: Colors.grey.withOpacity(0.2),
+                      color: Colors.grey.withOpacity(0.0),
                       spreadRadius: 5,
                       blurRadius: 7,
                       offset: const Offset(0, 3), // changes position of shadow
@@ -95,12 +99,12 @@ class _ProtectorHomeScreenState extends State<ProtectorHomeScreen> {
                   padding: const EdgeInsets.all(20),
                   child: Column(
                     children: [
-                      Row(
+                      const Row(
                         children: [
                           Text(
                             '어르신 일정 추가하기',
                             style: TextStyle(
-                              color: Colors.teal.shade700,
+                              color: Color(0xffff6a45a),
                               fontSize: 28,
                               fontWeight: FontWeight.w900,
                             ),
@@ -157,7 +161,7 @@ class _ProtectorHomeScreenState extends State<ProtectorHomeScreen> {
                                       if (eventName.isNotEmpty &&
                                           eventTime.isNotEmpty) {
                                         final url = Uri.parse(
-                                            'http://34.168.149.159:8080/calendar');
+                                            'http://34.28.46.24:8080/calendar');
                                         final headers = {
                                           'Authorization': '$_accessToken',
                                           'Content-Type': 'application/json'
@@ -175,6 +179,7 @@ class _ProtectorHomeScreenState extends State<ProtectorHomeScreen> {
                                             }));
                                         if (response.statusCode == 200) {
                                           print(response.body);
+                                          print("등록 성공");
                                         } else {
                                           print(response.body);
                                         }
@@ -204,33 +209,30 @@ class _ProtectorHomeScreenState extends State<ProtectorHomeScreen> {
                 decoration: BoxDecoration(
                   boxShadow: [
                     BoxShadow(
-                      color: Colors.grey.withOpacity(0.2),
+                      color: Colors.grey.withOpacity(0.0),
                       spreadRadius: 5,
                       blurRadius: 7,
                       offset: const Offset(0, 3), // changes position of shadow
                     ),
                   ],
-                  color: Colors.white,
+                  color: const Color(0xFFFFF1DD),
                   borderRadius: BorderRadius.circular(25),
                 ),
                 child: Padding(
                   padding: const EdgeInsets.all(20),
                   child: Column(
                     children: [
-                      Row(
+                      const Row(
                         children: [
                           Text(
                             '오늘의 일정',
                             style: TextStyle(
-                              color: Colors.teal.shade700,
+                              color: Color(0xffff6a45a),
                               fontSize: 28,
                               fontWeight: FontWeight.w900,
                             ),
                           )
                         ],
-                      ),
-                      const SizedBox(
-                        height: 30,
                       ),
                       ListView.builder(
                           shrinkWrap: true,
@@ -240,8 +242,10 @@ class _ProtectorHomeScreenState extends State<ProtectorHomeScreen> {
                             final event = _events[index];
                             if (event.date == formatDate) {
                               return ListTile(
-                                title: Text(event.name),
-                                subtitle: Text(event.time),
+                                title: Text(event.name,
+                                    style: const TextStyle(fontSize: 30.0)),
+                                subtitle: Text(event.time,
+                                    style: const TextStyle(fontSize: 30.0)),
                               );
                             } else {
                               return const Text('');
@@ -263,25 +267,25 @@ class _ProtectorHomeScreenState extends State<ProtectorHomeScreen> {
                 decoration: BoxDecoration(
                   boxShadow: [
                     BoxShadow(
-                      color: Colors.grey.withOpacity(0.2),
+                      color: Colors.grey.withOpacity(0.0),
                       spreadRadius: 5,
                       blurRadius: 7,
                       offset: const Offset(0, 3), // changes position of shadow
                     ),
                   ],
-                  color: Colors.white,
+                  color: const Color(0xffff9eab3),
                   borderRadius: BorderRadius.circular(25),
                 ),
                 child: Padding(
                   padding: const EdgeInsets.all(20),
                   child: Column(
                     children: [
-                      Row(
+                      const Row(
                         children: [
                           Text(
                             '약 복용',
                             style: TextStyle(
-                              color: Colors.teal.shade700,
+                              color: Color(0xfffffad00),
                               fontSize: 28,
                               fontWeight: FontWeight.w900,
                             ),
@@ -298,8 +302,10 @@ class _ProtectorHomeScreenState extends State<ProtectorHomeScreen> {
                           itemBuilder: (BuildContext context, int index) {
                             final fill = _fills[index];
                             return ListTile(
-                              title: Text(fill.fillName),
-                              subtitle: Text(fill.fillTime),
+                              title: Text(fill.fillName,
+                                  style: const TextStyle(fontSize: 30.0)),
+                              subtitle: Text(fill.fillTime,
+                                  style: const TextStyle(fontSize: 30.0)),
                             );
                           }),
                     ],
