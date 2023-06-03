@@ -23,7 +23,7 @@ class _LoginScreenState extends State<LoginScreen> {
   final passwordController = TextEditingController();
 
   Future<void> login() async {
-    const String url = 'http://34.168.149.159:8080/';
+    const String url = 'http://34.28.46.24:8080/';
     const String url2 = 'auth/login';
     var urllogin = Uri.parse(url + url2);
 
@@ -140,7 +140,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   style: ElevatedButton.styleFrom(
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10.0)),
-                      backgroundColor: Colors.teal.shade900),
+                      backgroundColor: const Color(0xFFF9B87E)),
                   onPressed: login,
                   child: const Padding(
                     padding: EdgeInsets.all(10.0),
@@ -158,7 +158,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     style: ElevatedButton.styleFrom(
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(10.0)),
-                        backgroundColor: Colors.teal.shade700),
+                        backgroundColor: const Color(0xFFF5A359)),
                     onPressed: () {
                       Navigator.push(
                         context,
