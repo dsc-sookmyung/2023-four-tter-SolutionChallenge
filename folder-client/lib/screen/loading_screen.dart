@@ -8,11 +8,11 @@ import 'package:folder/protector/event.dart';
 import 'package:folder/services/networking.dart';
 import 'package:folder/services/weathermodel.dart';
 import 'package:intl/intl.dart';
-import 'package:speech_to_text/speech_to_text.dart' as stt;
 import 'package:speech_to_text/speech_to_text.dart';
 import '../protector/fill.dart';
 import '../services/location.dart';
 import 'package:http/http.dart' as http;
+import 'package:weather_icons/weather_icons.dart';
 
 const apiKey = 'b56387afa1f8e32ae9fca47abdbf86e8';
 const bgColor = Color(0xff00A67E);
@@ -41,7 +41,7 @@ class _LoadingScreenState extends State<LoadingScreen> {
   SpeechToText speechToText = SpeechToText();
   late bool mlret;
   Future<void> MLApi(String anstext) async {
-    const url = 'http://34.125.92.151:8000/';
+    const url = 'http://34.28.46.24:8000/';
     const url2 = 'STT/STT';
     String url3 = 'prediction/$anstext';
     final stturl = Uri.parse(url + url2);
@@ -79,7 +79,7 @@ class _LoadingScreenState extends State<LoadingScreen> {
 
   Future<void> alarmPillApi(bool accept) async {
     print("alarmPillApi 시작");
-    var url = Uri.parse('http://34.168.149.159:8080/alarm/pill?pill=$accept');
+    var url = Uri.parse('http://34.28.46.24:8080/alarm/pill?pill=$accept');
     // http://34.168.149.159:8080/my-page/family?accept=true&userFamilyId=1
     final headers = {
       "accept": "*/*",
@@ -127,9 +127,9 @@ class _LoadingScreenState extends State<LoadingScreen> {
   }
 
   Future<void> patchAlarm(bool pill) async {
-    const String url1 = 'http://34.168.149.159:8080/alarm/pill?pill=';
+    const String url1 = 'http://34.28.46.24:8080/alarm/pill?pill=';
     String url2 = '$pill';
-    final urlparse = Uri.parse(url1);
+    //final urlparse = Uri.parse(url1);
     final headers = {
       "accept": "*/*",
       "Authorization": "$_accessToken",
@@ -171,7 +171,7 @@ class _LoadingScreenState extends State<LoadingScreen> {
   var isListening = false;
   var text = '버튼을 꾹 누르고 말해보세요';
   String resulttext = "";
-  final stt.SpeechToText _speech = stt.SpeechToText();
+  // final stt.SpeechToText _speech = stt.SpeechToText();
 
   Location location = Location();
   Map<String, dynamic> weatherData = {};
@@ -201,8 +201,8 @@ class _LoadingScreenState extends State<LoadingScreen> {
   }
 
   Future<void> CheckPillApi(bool check, int fillId) async {
-    var url = Uri.parse(
-        'http://34.168.149.159:8080/old/fillInfo/$fillId?accept=$check');
+    var url =
+        Uri.parse('http://34.28.46.24:8080/old/fillInfo/$fillId?accept=$check');
     final headers = {
       "accept": "*/*",
       "Authorization": "$_accessToken",
@@ -220,7 +220,7 @@ class _LoadingScreenState extends State<LoadingScreen> {
   }
 
   Future<void> PillApi() async {
-    const String url1 = 'http://34.168.149.159:8080/my-page/fillInfo/';
+    const String url1 = 'http://34.28.46.24:8080/my-page/fillInfo/';
     final careurl = Uri.parse(url1);
     final headers = {
       "accept": "*/*",
@@ -235,7 +235,7 @@ class _LoadingScreenState extends State<LoadingScreen> {
   }
 
   Future<void> getCalendar() async {
-    const String url1 = 'http://34.168.149.159:8080/calendar';
+    const String url1 = 'http://34.28.46.24:8080/calendar';
     final careurl = Uri.parse(url1);
     final headers = {
       "accept": "*/*",
@@ -279,7 +279,7 @@ class _LoadingScreenState extends State<LoadingScreen> {
       print('device token is null');
       return;
     }
-    String url = 'http://34.168.149.159:8080/auth/fcm';
+    String url = 'http://34.28.46.24:8080/auth/fcm';
     final headers = {
       "Authorization": "$_accessToken",
       "Content-Type": "application/json"
@@ -299,91 +299,34 @@ class _LoadingScreenState extends State<LoadingScreen> {
 
   @override
   Widget build(BuildContext context) {
+    setState(() {});
+    // getLocationData();
+    print("빌드");
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: const Color(0xFFFFF8ED),
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.all(10),
+          padding: const EdgeInsets.all(20),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 15),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          '${selectedDate.year}년 ${selectedDate.month}월 ${selectedDate.day}일',
-                          style: const TextStyle(
-                              color: Colors.black,
-                              fontSize: 35,
-                              fontWeight: FontWeight.w600),
-                        ),
-                        const SizedBox(
-                          height: 20,
-                        ),
-                      ],
-                    )
-                  ],
-                ),
-              ),
               Container(
-                width: 372,
-                clipBehavior: Clip.hardEdge,
                 decoration: BoxDecoration(
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.grey.withOpacity(0.2),
-                      spreadRadius: 5,
-                      blurRadius: 7,
-                      offset: const Offset(0, 3), // changes position of shadow
-                    ),
-                  ],
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(25),
+                  borderRadius: BorderRadius.circular(100),
+                  color: const Color(0xFFF6A45A),
                 ),
                 child: Padding(
-                  padding: const EdgeInsets.all(20),
-                  child: Column(
+                  padding: const EdgeInsets.all(10),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Row(
-                        children: const [
-                          Text(
-                            '오늘의 일정',
-                            style: TextStyle(
-                              color: Colors.black,
-                              fontSize: 38,
-                              fontWeight: FontWeight.w900,
-                            ),
-                          )
-                        ],
-                      ),
-                      const SizedBox(
-                        height: 15,
-                      ),
-                      ListView.builder(
-                          shrinkWrap: true,
-                          physics: const NeverScrollableScrollPhysics(),
-                          itemCount: _events.length,
-                          itemBuilder: (BuildContext context, int index) {
-                            final event = _events[index];
-                            if (event.date == formatDate) {
-                              return CheckboxListTile(
-                                value: event.isChecked,
-                                onChanged: ((value) {
-                                  setState(() {
-                                    event.isChecked = value!;
-                                  });
-                                }),
-                                title: Text(event.name),
-                                subtitle: Text(event.time),
-                              );
-                            } else {
-                              return const Text('');
-                            }
-                          }),
+                      Text(
+                        '${selectedDate.year}년 ${selectedDate.month}월 ${selectedDate.day}일',
+                        style: const TextStyle(
+                            color: Colors.white,
+                            fontSize: 35,
+                            fontWeight: FontWeight.w600),
+                      )
                     ],
                   ),
                 ),
@@ -395,27 +338,19 @@ class _LoadingScreenState extends State<LoadingScreen> {
                 width: 372,
                 clipBehavior: Clip.hardEdge,
                 decoration: BoxDecoration(
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.grey.withOpacity(0.2),
-                      spreadRadius: 5,
-                      blurRadius: 7,
-                      offset: const Offset(0, 3), // changes position of shadow
-                    ),
-                  ],
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(25),
+                  color: const Color(0xFFFFAD00),
+                  borderRadius: BorderRadius.circular(40),
                 ),
                 child: Padding(
                   padding: const EdgeInsets.all(20),
                   child: Column(
                     children: [
-                      Row(
-                        children: const [
+                      const Row(
+                        children: [
                           Text(
-                            '답변하기',
+                            '오늘의 날씨',
                             style: TextStyle(
-                              color: Colors.black,
+                              color: Colors.white,
                               fontSize: 38,
                               fontWeight: FontWeight.w900,
                             ),
@@ -425,9 +360,175 @@ class _LoadingScreenState extends State<LoadingScreen> {
                       const SizedBox(
                         height: 30,
                       ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Transform.scale(
+                            scale: 1.3,
+                            child: Transform.translate(
+                              offset: const Offset(-7, -13),
+                              child: weatherIcon,
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  '$temperature 도',
+                                  style: const TextStyle(
+                                      fontSize: 28,
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.w600),
+                                ),
+                                Text(
+                                  '$weatherexplain',
+                                  style: const TextStyle(
+                                      fontSize: 25,
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.w600),
+                                ),
+                              ],
+                            ),
+                          )
+                        ],
+                      ),
+                      const SizedBox(
+                        height: 30,
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              Container(
+                width: 372,
+                clipBehavior: Clip.hardEdge,
+                decoration: BoxDecoration(
+                  color: const Color(0xFFFFF1DD).withOpacity(0.9),
+                  borderRadius: BorderRadius.circular(40),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.all(20),
+                  child: Column(
+                    children: [
+                      const Row(
+                        children: [
+                          Text(
+                            '오늘의 일정',
+                            style: TextStyle(
+                              color: Color(0xFFF6A45A),
+                              fontSize: 38,
+                              fontWeight: FontWeight.w900,
+                            ),
+                          )
+                        ],
+                      ),
+                      ListView.separated(
+                        shrinkWrap: true,
+                        physics: const NeverScrollableScrollPhysics(),
+                        itemCount: _events.length,
+                        separatorBuilder: (BuildContext context, int index) {
+                          return const SizedBox(
+                              height: 10); // 공백을 조정할 수 있는 값으로 설정
+                        },
+                        itemBuilder: (BuildContext context, int index) {
+                          final event = _events[index];
+                          if (event.date == formatDate) {
+                            return CheckboxListTile(
+                              value: event.isChecked,
+                              onChanged: ((value) {
+                                setState(() {
+                                  event.isChecked = value!;
+                                });
+                              }),
+                              title: Text(event.name,
+                                  style: const TextStyle(fontSize: 30.0)),
+                              subtitle: Text(event.time,
+                                  style: const TextStyle(fontSize: 30.0)),
+                            );
+                          } else {
+                            return const SizedBox.shrink(); // 공백이 필요 없는 경우
+                          }
+                        },
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              Container(
+                width: 372,
+                clipBehavior: Clip.hardEdge,
+                decoration: BoxDecoration(
+                  color: const Color(0xFFFBE983).withOpacity(0.5),
+                  borderRadius: BorderRadius.circular(40),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.all(20),
+                  child: Column(
+                    children: [
+                      const Row(
+                        children: [
+                          Text(
+                            '약 복용',
+                            style: TextStyle(
+                              color: Color(0xFFFFAD00),
+                              fontSize: 38,
+                              fontWeight: FontWeight.w900,
+                            ),
+                          )
+                        ],
+                      ),
+                      const SizedBox(
+                        height: 15,
+                      ),
+                      ListView.builder(
+                        shrinkWrap: true,
+                        physics: const NeverScrollableScrollPhysics(),
+                        itemCount: _fills.length,
+                        itemBuilder: (context, index) {
+                          final fill = _fills[index];
+                          final dateTime = DateFormat('HH:mm:ss')
+                              .parse(fill.fillTime); // 시간 형식 변환
+                          final formattedTime = DateFormat('HH:mm')
+                              .format(dateTime); // 변경된 형식으로 포맷
+
+                          return CheckboxListTile(
+                            value: _fills[index].isChecked,
+                            onChanged: (value) {
+                              setState(() {
+                                _fills[index].isChecked = value ?? false;
+                                print(_fills[index].fillId);
+                                CheckPillApi(_fills[index].isChecked,
+                                    _fills[index].fillId ?? 0);
+                              });
+                            },
+                            title: Text(
+                              _fills[index].fillName,
+                              style: const TextStyle(fontSize: 30.0),
+                            ),
+                            subtitle: Text(
+                              formattedTime,
+                              style: const TextStyle(fontSize: 30.0),
+                            ),
+                          );
+                        },
+                      ),
+                      const SizedBox(height: 40),
                       Column(
                         children: [
-                          const Text('답변하기'),
+                          const Text('답변하기',
+                              style: TextStyle(
+                                  fontSize: 40.0, fontWeight: FontWeight.w500)),
+                          const SizedBox(
+                            height: 20,
+                          ),
                           FloatingActionButton(
                             child: GestureDetector(
                               onTapDown: (details) async {
@@ -457,101 +558,25 @@ class _LoadingScreenState extends State<LoadingScreen> {
                                 speechToText.stop();
                               },
                               child: CircleAvatar(
-                                backgroundColor: bgColor,
+                                backgroundColor: const Color(0xFFF2CA74),
                                 radius: 35,
                                 child: Icon(
-                                  isListening ? Icons.mic : Icons.mic_none,
-                                  color: Colors.white,
-                                  size: 30,
-                                ),
+                                    isListening ? Icons.mic : Icons.mic_none,
+                                    color: Colors.white),
                               ),
                             ),
                             onPressed: () {},
                           ),
-                        ],
-                      ),
-                      const SizedBox(
-                        height: 30,
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-              const SizedBox(
-                height: 20,
-              ),
-              Container(
-                width: 372,
-                clipBehavior: Clip.hardEdge,
-                decoration: BoxDecoration(
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.grey.withOpacity(0.2),
-                      spreadRadius: 5,
-                      blurRadius: 7,
-                      offset: const Offset(0, 3), // changes position of shadow
-                    ),
-                  ],
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(25),
-                ),
-                child: Padding(
-                  padding: const EdgeInsets.all(20),
-                  child: Column(
-                    children: [
-                      Row(
-                        children: const [
-                          Text(
-                            '오늘의 날씨',
-                            style: TextStyle(
-                              color: Colors.black,
-                              fontSize: 38,
-                              fontWeight: FontWeight.w900,
-                            ),
-                          )
-                        ],
-                      ),
-                      const SizedBox(
-                        height: 30,
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          Transform.scale(
-                            scale: 1.3,
-                            child: Transform.translate(
-                                offset: const Offset(-5, -2),
-                                child: weatherIcon //weatherIcon,
-                                ),
+                          const SizedBox(
+                            height: 20,
                           ),
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  //'18도',
-                                  '$temperature 도',
-                                  style: TextStyle(
-                                      fontSize: 28,
-                                      color: Colors.teal.shade700,
-                                      fontWeight: FontWeight.w600),
-                                ),
-                                Text(
-                                  // '가벼운 산책 어떠세요',
-                                  '$weatherexplain',
-                                  style: TextStyle(
-                                      fontSize: 25,
-                                      color: Colors.teal.shade700,
-                                      fontWeight: FontWeight.w600),
-                                ),
-                              ],
-                            ),
-                          )
+                          const Text('"다 먹었어"라고 답변해보세요',
+                              style: TextStyle(fontSize: 20.0)),
+                          const SizedBox(
+                            height: 20,
+                          ),
+                          //Text(text),
                         ],
-                      ),
-                      const SizedBox(
-                        height: 30,
                       ),
                     ],
                   ),
@@ -559,68 +584,6 @@ class _LoadingScreenState extends State<LoadingScreen> {
               ),
               const SizedBox(
                 height: 20,
-              ),
-              Container(
-                width: 372,
-                clipBehavior: Clip.hardEdge,
-                decoration: BoxDecoration(
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.grey.withOpacity(0.2),
-                      spreadRadius: 5,
-                      blurRadius: 7,
-                      offset: const Offset(0, 3), // changes position of shadow
-                    ),
-                  ],
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(25),
-                ),
-                child: Padding(
-                  padding: const EdgeInsets.all(20),
-                  child: Column(
-                    children: [
-                      Row(
-                        children: const [
-                          Text(
-                            '약 복용',
-                            style: TextStyle(
-                              color: Colors.black,
-                              fontSize: 38,
-                              fontWeight: FontWeight.w900,
-                            ),
-                          )
-                        ],
-                      ),
-                      const SizedBox(
-                        height: 15,
-                      ),
-                      ListView.builder(
-                        shrinkWrap: true,
-                        physics: const NeverScrollableScrollPhysics(),
-                        itemCount: _fills.length,
-                        itemBuilder: (context, index) {
-                          return CheckboxListTile(
-                            value: _fills[index]
-                                .isChecked, // 각 요소의 isChecked 값을 사용
-                            onChanged: (value) {
-                              setState(() {
-                                _fills[index].isChecked =
-                                    value ?? false; // isChecked 값을 업데이트
-                                print(_fills[index]
-                                    .fillId); //이 형태가 fillid각각 접근 가능
-                                // print("fills : $_fills"); //불가능
-                                CheckPillApi(_fills[index].isChecked,
-                                    _fills[index].fillId ?? 0);
-                              });
-                            },
-                            title: Text(_fills[index].fillName),
-                            subtitle: Text(_fills[index].fillTime),
-                          );
-                        },
-                      )
-                    ],
-                  ),
-                ),
               ),
             ],
           ),

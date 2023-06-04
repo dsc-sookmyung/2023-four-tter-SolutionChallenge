@@ -33,7 +33,7 @@ class _OldMyScreenState extends State<OldMyScreen> {
   }
 
   Future<void> FamilyAddApi() async {
-    String url = 'http://34.168.149.159:8080/my-page/family?userCode=';
+    String url = 'http://34.28.46.24:8080/my-page/family?userCode=';
     String url2 = protectorplus.text.trim();
     final headers = {
       "accept": "*/*",
@@ -53,7 +53,7 @@ class _OldMyScreenState extends State<OldMyScreen> {
   }
 
   Future<void> OldPillInfoApi() async {
-    const String url1 = 'http://34.168.149.159:8080/old/fillInfo/';
+    const String url1 = 'http://34.28.46.24:8080/old/fillInfo/';
     final careurl = Uri.parse(url1);
     final headers = {
       "accept": "*/*",
@@ -69,7 +69,7 @@ class _OldMyScreenState extends State<OldMyScreen> {
   }
 
   Future<void> CheckFriendApi() async {
-    const String url1 = 'http://34.168.149.159:8080/my-page/family';
+    const String url1 = 'http://34.28.46.24:8080/my-page/family';
     final urlparse = Uri.parse(url1);
     final headers = {
       "accept": "*/*",
@@ -86,7 +86,7 @@ class _OldMyScreenState extends State<OldMyScreen> {
   }
 
   Future<void> UserCodeApi() async {
-    const String url1 = 'http://34.168.149.159:8080/auth/me';
+    const String url1 = 'http://34.28.46.24:8080/auth/me';
     final oldurl = Uri.parse(url1);
     final headers = {
       "accept": "*/*",
@@ -108,7 +108,7 @@ class _OldMyScreenState extends State<OldMyScreen> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: const Color(0xFFFFFFFF),
+        backgroundColor: const Color(0xFFFFF8ED),
         body: SingleChildScrollView(
           child: Padding(
             padding: const EdgeInsets.symmetric(
@@ -120,23 +120,14 @@ class _OldMyScreenState extends State<OldMyScreen> {
                 const SizedBox(
                   height: 10,
                 ),
-                Row(),
+                const Row(),
                 const SizedBox(
                   height: 40,
                 ),
                 Container(
                   clipBehavior: Clip.hardEdge,
                   decoration: BoxDecoration(
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey.withOpacity(0.2),
-                        spreadRadius: 5,
-                        blurRadius: 7,
-                        offset:
-                            const Offset(0, 3), // changes position of shadow
-                      ),
-                    ],
-                    color: Colors.white,
+                    color: const Color(0xFFF6A45A),
                     borderRadius: BorderRadius.circular(25),
                   ),
                   child: Padding(
@@ -150,7 +141,7 @@ class _OldMyScreenState extends State<OldMyScreen> {
                             offset: const Offset(10, 2),
                             child: const Icon(
                               Icons.account_circle,
-                              color: Colors.grey,
+                              color: Color(0xFFDBDBDB),
                               size: 50,
                             ),
                           ),
@@ -165,7 +156,7 @@ class _OldMyScreenState extends State<OldMyScreen> {
                                   '$username',
                                   style: const TextStyle(
                                     fontWeight: FontWeight.w600,
-                                    color: Colors.black,
+                                    color: Colors.white,
                                     fontSize: 32,
                                   ),
                                 ),
@@ -191,22 +182,17 @@ class _OldMyScreenState extends State<OldMyScreen> {
                   ),
                 ),
                 const SizedBox(
-                  height: 10,
+                  height: 20,
                 ),
                 Container(
                   clipBehavior: Clip.hardEdge,
                   decoration: BoxDecoration(
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey.withOpacity(0.2),
-                        spreadRadius: 5,
-                        blurRadius: 7,
-                        offset:
-                            const Offset(0, 3), // changes position of shadow
-                      ),
-                    ],
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(25),
+                    border: Border.all(
+                      color: const Color(0xFFF6A45A),
+                      width: 2.0,
+                    ),
                   ),
                   child: Padding(
                     padding: const EdgeInsets.all(20),
@@ -216,13 +202,13 @@ class _OldMyScreenState extends State<OldMyScreen> {
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Row(
-                              children: const [
+                            const Row(
+                              children: [
                                 Text(
                                   '나의 코드',
                                   style: TextStyle(
                                     fontWeight: FontWeight.w600,
-                                    color: Colors.black,
+                                    color: Color(0xFFF6A45A),
                                     fontSize: 28,
                                   ),
                                 ),
@@ -238,7 +224,7 @@ class _OldMyScreenState extends State<OldMyScreen> {
                               '$userCodeget',
                               textAlign: TextAlign.start,
                               style: const TextStyle(
-                                color: Color(0xFF004D40),
+                                color: Colors.black,
                                 fontSize: 25,
                                 fontWeight: FontWeight.w400,
                               ),
@@ -250,35 +236,30 @@ class _OldMyScreenState extends State<OldMyScreen> {
                   ),
                 ),
                 const SizedBox(
-                  height: 10,
+                  height: 20,
                 ),
                 Container(
                   width: 371.4,
                   clipBehavior: Clip.hardEdge,
                   decoration: BoxDecoration(
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey.withOpacity(0.2),
-                        spreadRadius: 5,
-                        blurRadius: 7,
-                        offset:
-                            const Offset(0, 3), // changes position of shadow
-                      ),
-                    ],
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(25),
+                    border: Border.all(
+                      color: const Color(0xFFF1C974),
+                      width: 2.0,
+                    ),
                   ),
                   child: Padding(
                     padding: const EdgeInsets.all(20),
                     child: Column(
                       children: [
-                        Row(
-                          children: const [
+                        const Row(
+                          children: [
                             Text(
                               '보호자 추가하기',
                               style: TextStyle(
                                 fontWeight: FontWeight.w600,
-                                color: Colors.black,
+                                color: Color(0xFFFFAD00),
                                 fontSize: 28,
                               ),
                             ),
@@ -312,7 +293,7 @@ class _OldMyScreenState extends State<OldMyScreen> {
                                                 BorderRadius.circular(10))),
                                     backgroundColor:
                                         MaterialStateProperty.all<Color>(
-                                            Colors.teal.shade700),
+                                            const Color(0xFFF1C974)),
                                     fixedSize: MaterialStateProperty.all<Size>(
                                         const Size.fromHeight(59))),
                                 onPressed: () {
@@ -334,15 +315,10 @@ class _OldMyScreenState extends State<OldMyScreen> {
                 Container(
                   clipBehavior: Clip.hardEdge,
                   decoration: BoxDecoration(
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey.withOpacity(0.2),
-                        spreadRadius: 5,
-                        blurRadius: 7,
-                        offset:
-                            const Offset(0, 3), // changes position of shadow
-                      ),
-                    ],
+                    border: Border.all(
+                      color: const Color(0xFFF6A45A),
+                      width: 2.0,
+                    ),
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(25),
                   ),
@@ -354,13 +330,13 @@ class _OldMyScreenState extends State<OldMyScreen> {
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Row(
-                              children: const [
+                            const Row(
+                              children: [
                                 Text(
                                   '보호대상 추가 요청',
                                   style: TextStyle(
                                     fontWeight: FontWeight.w600,
-                                    color: Colors.black,
+                                    color: Color(0xFFF6A45A),
                                     fontSize: 28,
                                   ),
                                 ),
@@ -379,7 +355,7 @@ class _OldMyScreenState extends State<OldMyScreen> {
                                   children: [
                                     Text(
                                       friendName?.isEmpty ??
-                                              true || friendName == ""
+                                              true || friendName == " "
                                           ? "보호자 추가요청이 없습니다"
                                           : "$friendName님이 보호자 등록을 요청했어요",
                                       textAlign: TextAlign.center,
@@ -417,7 +393,7 @@ class _OldMyScreenState extends State<OldMyScreen> {
                                           "수락할게요",
                                           style: TextStyle(
                                             fontWeight: FontWeight.w600,
-                                            color: Colors.teal,
+                                            color: Color(0xFFF6A45A),
                                             fontSize: 15,
                                           ),
                                         ),
@@ -427,7 +403,8 @@ class _OldMyScreenState extends State<OldMyScreen> {
                                       ),
                                       ElevatedButton(
                                         style: ElevatedButton.styleFrom(
-                                          backgroundColor: Colors.teal.shade700,
+                                          backgroundColor:
+                                              const Color(0xFFF6A45A),
                                           shadowColor: Colors.teal.shade700,
                                           //elevation: 3,
                                           shape: RoundedRectangleBorder(
@@ -458,15 +435,10 @@ class _OldMyScreenState extends State<OldMyScreen> {
                 Container(
                   clipBehavior: Clip.hardEdge,
                   decoration: BoxDecoration(
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey.withOpacity(0.2),
-                        spreadRadius: 5,
-                        blurRadius: 7,
-                        offset:
-                            const Offset(0, 3), // changes position of shadow
-                      ),
-                    ],
+                    border: Border.all(
+                      color: const Color(0xFFF1C974),
+                      width: 2.0,
+                    ),
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(25),
                   ),
@@ -474,13 +446,13 @@ class _OldMyScreenState extends State<OldMyScreen> {
                     padding: const EdgeInsets.all(20),
                     child: Column(
                       children: [
-                        Row(
-                          children: const [
+                        const Row(
+                          children: [
                             Text(
                               '약 복용일지',
                               style: TextStyle(
                                 fontWeight: FontWeight.w600,
-                                color: Colors.black,
+                                color: Color(0xFFFFAD00),
                                 fontSize: 28,
                               ),
                             ),
@@ -492,8 +464,8 @@ class _OldMyScreenState extends State<OldMyScreen> {
                         const SizedBox(
                           height: 10,
                         ),
-                        Row(
-                          children: const [
+                        const Row(
+                          children: [
                             Text(
                               '복용중인 약을 수정하세요',
                               style: TextStyle(
@@ -511,13 +483,16 @@ class _OldMyScreenState extends State<OldMyScreen> {
                             itemBuilder: (context, index) {
                               return Flexible(
                                   child: ListTile(
-                                title: Text(_fillsT[index].fillName),
+                                title: Text(_fillsT[index].fillName,
+                                    style: const TextStyle(fontSize: 20.0)),
                                 subtitle: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    Text(_fillsT[index].fillTime),
+                                    Text(_fillsT[index].fillTime,
+                                        style: const TextStyle(fontSize: 20.0)),
                                     Text(
-                                        "복용여부: ${_fillsT[index].isChecked ? '복용' : '미복용'}"),
+                                        "복용여부: ${_fillsT[index].isChecked ? '복용' : '미복용'}",
+                                        style: const TextStyle(fontSize: 20.0)),
                                   ],
                                 ),
                               ));
