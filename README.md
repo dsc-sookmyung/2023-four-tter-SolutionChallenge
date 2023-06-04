@@ -40,7 +40,7 @@ As Korean society enters an ultra-aged society, the number of single-person elde
 
 <br> <br>
 
-|<img src="https://cdn.discordapp.com/attachments/1091211029360422973/1091340584733659136/KakaoTalk_20230329_191324820.gif">|<img src="https://cdn.discordapp.com/attachments/1091211029360422973/1091341327087718500/KakaoTalk_20230330_151111167.gif" >|<img src="https://cdn.discordapp.com/attachments/1091211029360422973/1091343017908129802/connect.gif">|<img src="https://cdn.discordapp.com/attachments/1091211029360422973/1091341327461007370/KakaoTalk_20230330_151145780.gif">|
+|<img src="https://media.discordapp.net/attachments/1114839224361955328/1114839350056853545/nami.gif">|<img src="https://cdn.discordapp.com/attachments/1091211029360422973/1091341327087718500/KakaoTalk_20230330_151111167.gif" >|<img src="https://cdn.discordapp.com/attachments/1091211029360422973/1091343017908129802/connect.gif">|<img src="https://cdn.discordapp.com/attachments/1091211029360422973/1091341327461007370/KakaoTalk_20230330_151145780.gif">|
 |------|------|------|------|
 |**SIGN IN & UP**|**Medication Check & Alarm**|**Connecting with the elderly**|**Interaction with the elderly**|
 
