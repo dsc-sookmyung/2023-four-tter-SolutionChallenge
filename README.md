@@ -1,7 +1,7 @@
 # **2023 Solution Challenge : Folder**
 **Folder** is an app designed for older adults and their guardians, allowing their guardians to remotely monitor elderly's schedule and medication intake to care their well-being even from afar.
 <br><br>
-![](https://cdn.discordapp.com/attachments/1091211029360422973/1091271161830199316/SolutionChallenge-Demo.jpg)
+![SolutionChallenge-Demo ver2](https://github.com/ohyujeong/folder-readme-test/assets/65644373/4a0fc8fa-1fcb-4b3a-a77b-a5c20fe8e21e)
 
 
 ## ✨ **Introduction**
@@ -31,7 +31,7 @@ As Korean society enters an ultra-aged society, the number of single-person elde
 
 <br>
 
-[![Folder Demo Video](https://cdn.discordapp.com/attachments/1060472903793123353/1091221192016416879/folder_youtube-001_2.jpg)](https://youtu.be/QQfEpRcPbzc)
+[![Folder Demo Video](https://cdn.discordapp.com/attachments/1060472903793123353/1091221192016416879/folder_youtube-001_2.jpg)](https://youtu.be/ulEupCBfHxA)
 
 <br>
 
@@ -40,9 +40,9 @@ As Korean society enters an ultra-aged society, the number of single-person elde
 
 <br> <br>
 
-|<img src="https://cdn.discordapp.com/attachments/1091211029360422973/1091340584733659136/KakaoTalk_20230329_191324820.gif">|<img src="https://cdn.discordapp.com/attachments/1091211029360422973/1091341327087718500/KakaoTalk_20230330_151111167.gif" >|<img src="https://cdn.discordapp.com/attachments/1091211029360422973/1091343017908129802/connect.gif">|<img src="https://cdn.discordapp.com/attachments/1091211029360422973/1091341327461007370/KakaoTalk_20230330_151145780.gif">|
+|<img src="https://cdn.discordapp.com/attachments/1114839224361955328/1114839531846377522/4a9595dfd36dec45.gif">|<img src="https://cdn.discordapp.com/attachments/1114839224361955328/1114839531489865790/dc30a03f920bc47a.gif" >|<img src="https://cdn.discordapp.com/attachments/1114839224361955328/1114839349649997824/bee6b9e2f0221593.gif">|<img src="https://cdn.discordapp.com/attachments/1114839224361955328/1114839349238972476/9edf67f1937bfac5.gif">|
 |------|------|------|------|
-|**SIGN IN & UP**|**Medication Check & Alarm**|**Connecting with the elderly**|**Interaction with the elderly**|
+|**Medication & Meal Alarm**|**Medication Check**|**Connecting with the elderly**|**Interaction with the elderly**|
 
 
 <br> <br>

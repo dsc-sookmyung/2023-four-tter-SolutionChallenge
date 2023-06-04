@@ -3,10 +3,7 @@ package com.gdsc.forder.service;
 import com.gdsc.forder.domain.*;
 import com.gdsc.forder.dto.*;
 import com.gdsc.forder.provider.JwtTokenProvider;
-import com.gdsc.forder.repository.FillRepository;
-import com.gdsc.forder.repository.UserFamilyRepository;
-import com.gdsc.forder.repository.UserFillRepository;
-import com.gdsc.forder.repository.UserRepository;
+import com.gdsc.forder.repository.*;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -28,6 +25,7 @@ public class UserService {
 
     private final UserFillRepository userFillRepository;
     private final UserFamilyRepository userFamilyRepository;
+    private final AlarmRepository alarmRepository;
 
     public UserDTO saveFcmToken(long userId, String fcmToken){
         User user = userRepository.findById(userId).get();
@@ -114,6 +112,8 @@ public class UserService {
 
     public void addFill(AddFillDTO addFillDTO, Long userId) {
 
+        User user = userRepository.findById(userId).get();
+
         List<Fill> fillList = new ArrayList<>();
 
         List<String> fillNames = addFillDTO.getFills();
@@ -121,12 +121,21 @@ public class UserService {
 
         for(int i=0; i<fillNames.size(); i++){
             Fill fill = new Fill();
+
+            //알림 전송용 Alarm 데이터 생성
+            Alarm alarm = new Alarm();
+            alarm.setUser(user.getUsername()+userId);
+            alarm.setTitle(fillNames.get(i));
+            alarm.setMessage(fillNames.get(i) + " 복용할 시간 입니다. 잊지 마세요.");
+            alarm.setAlarmTime(addFillDTO.getFillTimes().get(i));
+            alarm.setTopic(fillNames.get(i) + fillTimes.get(i));
+            alarmRepository.save(alarm);
+
             fill.setFillName(fillNames.get(i));
             fill.setFillTime(fillTimes.get(i));
             fillList.add(fill);
         }
 
-        User user = userRepository.findById(userId).get();
 
         for(int i=0; i<fillList.size(); i++){
             Fill existedFill = fillRepository.findByOption(fillList.get(i).getFillName(), fillList.get(i).getFillTime());

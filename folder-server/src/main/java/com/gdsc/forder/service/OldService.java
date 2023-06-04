@@ -8,6 +8,7 @@ import com.gdsc.forder.domain.UserFill;
 import com.gdsc.forder.dto.AddCalendarDTO;
 import com.gdsc.forder.dto.GetCalendarDTO;
 import com.gdsc.forder.dto.GetFillDTO;
+import com.gdsc.forder.dto.UserDTO;
 import com.gdsc.forder.repository.CalendarRepository;
 import com.gdsc.forder.repository.FillRepository;
 import com.gdsc.forder.repository.UserFillRepository;
@@ -32,6 +33,10 @@ public class OldService {
     private final UserFillRepository userFillRepository;
     private final CalendarRepository calendarRepository;
 
+    public UserDTO getFamily(Long userId){
+        User user = userRepository.findById(userId).get();
+        return UserDTO.fromEntity(user);
+    }
 
     public List<GetFillDTO> getFillInfo(Long userId){
         User user = userRepository.findById(userId).get();

@@ -35,6 +35,13 @@ public class MainController {
         return oldService.getFillInfo(user.getId());
     }
 
+    @ApiOperation(value = "가족 정보 확인 엔드포인트")
+    @GetMapping("family")
+    public UserDTO getFamilyInfo(@ApiIgnore Principal principal){
+        UserDTO user = customUserDetailService.findUser(principal);
+        return oldService.getFamily(user.getFamilyId());
+    }
+
 
     @ApiOperation(value = "약 복용 여부 체크 엔드 포인트")
     @PatchMapping("old/fillInfo/{fillId}")
@@ -46,7 +53,7 @@ public class MainController {
 
 
     //매일 새벽 1시 복용 여부 false 로 초기화 해주기
-    //    @Scheduled(cron = "0 0 1 * * *")
+//    @Scheduled(cron = "0 0 1 * * *")
     @ApiOperation(value = "모든 회원들 약 복용 여부 자동 초기화")
     @PatchMapping("old/fillInfo/schedule")
     public void resetFillCheck(){
