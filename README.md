@@ -1,7 +1,7 @@
 # **2023 Solution Challenge : Folder**
 **Folder** is an app designed for older adults and their guardians, allowing their guardians to remotely monitor elderly's schedule and medication intake to care their well-being even from afar.
 <br><br>
-![](https://cdn.discordapp.com/attachments/1091211029360422973/1091271161830199316/SolutionChallenge-Demo.jpg)
+![SolutionChallenge-Demo ver2](https://github.com/ohyujeong/folder-readme-test/assets/65644373/4a0fc8fa-1fcb-4b3a-a77b-a5c20fe8e21e)
 
 
 ## ✨ **Introduction**
