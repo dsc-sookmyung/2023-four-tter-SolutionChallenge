@@ -31,7 +31,7 @@ As Korean society enters an ultra-aged society, the number of single-person elde
 
 <br>
 
-[![Folder Demo Video](https://cdn.discordapp.com/attachments/1060472903793123353/1091221192016416879/folder_youtube-001_2.jpg)](https://youtu.be/ulEupCBfHxA)
+[![Folder Demo Video](https://media.discordapp.net/attachments/1060472903793123353/1091251096619585587/folder_.png?ex=65f3edc7&is=65e178c7&hm=57f9e39a28401c22fa5feb573875c479dbdc5497f1dd2a9cf5139045b2e31c78&=&format=webp&quality=lossless&width=1479&height=855)
 
 <br>
 
@@ -40,9 +40,10 @@ As Korean society enters an ultra-aged society, the number of single-person elde
 
 <br> <br>
 
-|<img src="https://cdn.discordapp.com/attachments/1114839224361955328/1114839531846377522/4a9595dfd36dec45.gif">|<img src="https://cdn.discordapp.com/attachments/1114839224361955328/1114839531489865790/dc30a03f920bc47a.gif" >|<img src="https://cdn.discordapp.com/attachments/1114839224361955328/1114839349649997824/bee6b9e2f0221593.gif">|<img src="https://cdn.discordapp.com/attachments/1114839224361955328/1114839349238972476/9edf67f1937bfac5.gif">|
+|<img src="https://cdn.discordapp.com/attachments/1114839224361955328/1114839531846377522/4a9595dfd36dec45.gif?ex=65f6afb9&is=65e43ab9&hm=2a84d8525a8a696a1f09c1573022cfad84351dff927740e77f21c555cf5bbd4a&">|<img src="https://media.discordapp.net/attachments/1114839224361955328/1114839531489865790/dc30a03f920bc47a.gif?ex=65f6afb9&is=65e43ab9&hm=6876b43cadcd744c9c490f9e967d8eb0e346fb450c038014891f14691e293a2e&=&width=453&height=874" >|<img src="https://cdn.discordapp.com/attachments/1114839224361955328/1114839349649997824/bee6b9e2f0221593.gif?ex=65f6af8d&is=65e43a8d&hm=0a7e36b1a243e82ed516753e4bdab7b9da1f0576ce92ee5dba452401bc6d8177&">|<img src="https://cdn.discordapp.com/attachments/1114839224361955328/1114839349238972476/9edf67f1937bfac5.gif?ex=65f6af8d&is=65e43a8d&hm=9abf08b448f17ad1b6460db37661543981b3947ca46e15fd204b73e49a7aa33c&">|
 |------|------|------|------|
 |**Medication & Meal Alarm**|**Medication Check**|**Connecting with the elderly**|**Interaction with the elderly**|
+
 
 
 <br> <br>
@@ -62,5 +63,4 @@ As Korean society enters an ultra-aged society, the number of single-person elde
 
 |[오유정](https://github.com/ohyujeong)|[조유림](https://github.com/ofzlo)|[정시은](https://github.com/alacori)|[최다영](https://github.com/dayoung20)|
 |---|---|---|---|
-|<img src="https://i.ibb.co/hc3RPwT/Kakao-Talk-20230319-212123861.png">|<img src="https://cdn.discordapp.com/attachments/1091211029360422973/1091256442754957342/image.png" width=400>|<img src="https://cdn.discordapp.com/attachments/1091211029360422973/1091254304804970606/IMG_2057.png">|<img src="https://cdn.discordapp.com/attachments/1091211029360422973/1091253631673708595/KakaoTalk_20230331_155008862.png">|
 |Backend |ML|Frontend |Frontend|
