@@ -23,7 +23,7 @@ As Korean society enters an ultra-aged society, the number of single-person elde
 ## 🛠 **Project Architecture**
 
 
-![](https://cdn.discordapp.com/attachments/1060472903793123353/1091251096619585587/folder_.png)
+![](https://media.discordapp.net/attachments/1060472903793123353/1091251096619585587/folder_.png?ex=65f3edc7&is=65e178c7&hm=57f9e39a28401c22fa5feb573875c479dbdc5497f1dd2a9cf5139045b2e31c78&=&format=webp&quality=lossless&width=1479&height=855)
 
 <br>
 
@@ -31,7 +31,7 @@ As Korean society enters an ultra-aged society, the number of single-person elde
 
 <br>
 
-[![Folder Demo Video](https://media.discordapp.net/attachments/1060472903793123353/1091251096619585587/folder_.png?ex=65f3edc7&is=65e178c7&hm=57f9e39a28401c22fa5feb573875c479dbdc5497f1dd2a9cf5139045b2e31c78&=&format=webp&quality=lossless&width=1479&height=855)
+[![Folder Demo Video](https://media.discordapp.net/attachments/1060472903793123353/1091219521177653279/folder-youtube.jpg?ex=65f3d05f&is=65e15b5f&hm=26f8417370c9e27389d5325f6b47ce33ae536d8b4a9fbc3aee5c85f914ab2117&=&format=webp&width=1557&height=876)](https://youtu.be/ulEupCBfHxA?si=Cj3DcBJ7VYc4GQYc)
 
 <br>
 
